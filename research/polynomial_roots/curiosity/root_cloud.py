@@ -28,13 +28,19 @@ polynomial's "root cloud".
 
 from itertools import permutations
 
+import random
 import numpy as np
 import matplotlib.pyplot as plt
+
+ENGAGE_RANDOMIZER = False
 
 def generateRootCloud(initial_poly, MAX_POINTS = 100000):
     queue = [initial_poly]
     points = []
     while len(points) < MAX_POINTS:
+        if ENGAGE_RANDOMIZER and len(points) > 1:
+            i = random.randint(0, len(points) - 1)
+            points[i], points[0] = points[0], points[i]
         poly = queue[0]
         queue[:] = queue[1:]
         roots = np.roots(poly)
