@@ -25,10 +25,10 @@ I call this progression of roots for quadratic polynomials the "quadratic root
 cycle".
 """
 
-from itertools import permutations
-
 import numpy as np
 import matplotlib.pyplot as plt
+
+from root_cloud import generateRootCloud
 
 def find_roots(poly):
     assert len(poly) == 3
@@ -51,21 +51,39 @@ def rootIterate(initial_poly, MAX_POINTS = 10000):
         queue.append((next_poly, generation + 1))
     return pointsB, pointsC
 
-plt.figure(figsize=(11.5,8))
+def plotBackground(points):
+    xs = [np.real(x) for x in points]
+    ys = [np.imag(x) for x in points]
+    plt.scatter(xs, ys, marker = '.', s = 1, c = '#CCCCFF')
 
 def plotPoints(pointsB, pointsC):
     xs = [np.real(x) for (x, g) in pointsB]
     ys = [np.imag(x) for (x, g) in pointsB]
     plt.plot(xs, ys, color = '#4444AA', linewidth = 1)
-    plt.scatter([xs[0]], [ys[0]], marker = 'o', color = '#4444AA')
+    plt.scatter([xs[0]], [ys[0]], marker = 'o', c = '#4444AA')
 
     xs = [np.real(x) for (x, g) in pointsC]
     ys = [np.imag(x) for (x, g) in pointsC]
     plt.plot(xs, ys, color = '#AA4444', linewidth = 1)
-    plt.scatter([xs[0]], [ys[0]], marker = 'o', color = '#AA4444')
+    plt.scatter([xs[0]], [ys[0]], marker = 'o', c = '#AA4444')
 
-pointsB, pointsC = rootIterate([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j])
+def main():
+    poly = [1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j]
+    # Some additional, interesting looking starting polynomials.
+    #poly = [1.0 + 0.0j, 0.0 + -1.4j, 1.0 + 0.2j]
+    #poly = [1.0 + 0.0j, 2.0 +  1.0j, 0.0 - 0.4j]
+    #poly = [1.0 + 0.0j, 4.0 + 4.0j, -4.0 - 4.0j]
+    poly = [1.0 + 0.0j, 1.0 - 2.0j, -3.0 + 4.0j]
 
-plotPoints(pointsB, pointsC)
+    pointsBackground = generateRootCloud(poly)
+    pointsB, pointsC = rootIterate(poly)
 
-plt.show()
+    plt.figure(figsize=(11.5,8))
+
+    plotBackground(pointsBackground)
+    plotPoints(pointsB, pointsC)
+
+    plt.show()
+
+if __name__ == '__main__':
+    main()

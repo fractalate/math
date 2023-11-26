@@ -50,19 +50,23 @@ def generateRootCloud(initial_poly, MAX_POINTS = 100000):
             queue.append(next_poly)
     return points
 
-plt.figure(figsize=(16,16))
-
 def plotPoints(points):
     xs = [np.real(x) for x in points]
     ys = [np.imag(x) for x in points]
     plt.scatter(xs, ys, marker='.', s=1)
 
-points2 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j])
-#points3 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j])
-#points4 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.j])
+def main():
+    points2 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j])
+    #points3 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j])
+    #points4 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.j])
 
-plotPoints(points2)
-#plotPoints(points3)
-#plotPoints(points4)
+    plt.figure(figsize=(16,16))
 
-plt.show()
+    plotPoints(points2)
+    #plotPoints(points3)
+    #plotPoints(points4)
+
+    plt.show()
+
+if __name__ == '__main__':
+    main()
