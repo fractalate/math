@@ -1,0 +1,6 @@
+# Ignore cached script assets for Python.
+__pycache__/
+*.pyc
+
+# Ignore checkpoints in IPython (Jupyter) Notebooks.
+.ipynb_checkpoints/
