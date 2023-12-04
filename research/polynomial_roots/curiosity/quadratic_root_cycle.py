@@ -73,7 +73,7 @@ def main():
     #poly = [1.0 + 0.0j, 0.0 + -1.4j, 1.0 + 0.2j]
     #poly = [1.0 + 0.0j, 2.0 +  1.0j, 0.0 - 0.4j]
     #poly = [1.0 + 0.0j, 4.0 + 4.0j, -4.0 - 4.0j]
-    poly = [1.0 + 0.0j, 1.0 - 2.0j, -3.0 + 4.0j]
+    #poly = [1.0 + 0.0j, 1.0 - 2.0j, -3.0 + 4.0j]
 
     pointsBackground = generateRootCloud(poly)
     pointsB, pointsC = rootIterate(poly)
