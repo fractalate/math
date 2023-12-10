@@ -58,7 +58,7 @@ def plotPoints(points):
 def main():
     points2 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j])
     #points3 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j])
-    #points4 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.j])
+    #points4 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.j], MAX_POINTS = 40000)
 
     plt.figure(figsize=(16,16))
 
