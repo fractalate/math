@@ -36,7 +36,7 @@ $$
 H(\Rho) = \bigcup_{r \in \Rho} G(r)
 $$
 
-or in less rigorous words, $H$ maps a set root pairs (or set of coefficient pairs) to a new set of root pairs; each resulting root pair being the set of roots of polynomials made from the input root pairs. For example $H(\left\{\left\{r_1, r_2\right\}, \left\{r_3, r_4\right\} \right\}) = \left\{F(r_1, r_2), F(r_2, r_1), F(r_3, r_4), F(r_4, r_3)\right\}$
+or in less rigorous words, $H$ maps a set root pairs (or set of coefficient pairs) to a new set of root pairs; each resulting root pair being the set of roots of polynomials made from the input root pairs. For example $H(\left\{ \left\{r_1, r_2\right\}, \left\{r_3, r_4\right\} \right\}) = \left\{F(r_1, r_2), F(r_2, r_1), F(r_3, r_4), F(r_4, r_3)\right\}$
 
 Define $H_0 = \left\{ F(b, c) \right\}$ and $H_n = H_{n-1} \cup H(H_{n-1})$.
 
