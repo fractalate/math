@@ -24,7 +24,7 @@ $$
 F(b, c) = \\{ r_1, r_2 \\}
 $$
 
-The set $r = F(b, c)$ has size 1 when $r_1 = r_2$ and size 2 when $r_1 \ne r_2$. Define a function $G:X \rightarrow Y$ where $Y \subset \mathcal{P}(X)$ and each element of $Y$ has size 1 or 2 as
+The set $r = F(b, c)$ has size 1 when $r_1 = r_2$ and size 2 otherwise. Define a function $G:X \rightarrow Y$ where $Y \subset \mathcal{P}(X)$ and each element of $Y$ has size 1 or 2 as
 
 $$
 G(r) = \\{ F(r_1, r_2), F(r_2, r_1) \\}
