@@ -8,7 +8,7 @@
 
 \subsection*{Tools}
 
-For more compact, finite summations:
+For more compact, finite summations, define a function $S$ to be
 \begin{equation}
     S(x_1,...,x_N) = \sum_{k=1}^{N} x_k
 \end{equation}
@@ -18,65 +18,62 @@ For more compact, finite summations:
 There is a formula which counts the number of ways you can cut a convex polygon
 between all its faces. Given a convex polygon with $N$ faces, this is
 \begin{equation}
-    C = S(N-1,...,0) = \frac{N (N - 1)}{2}
+    S(N-1,...,0) = \frac{N (N - 1)}{2}
 \end{equation}
 This captures the idea that from one face, you can cut to $N-1$ other faces, from
-the next you can cut to $N-2$ other faces, and so on, being sure not to double count.
+the next you can cut to $N-2$ other faces if you're careful not to double count, and so on until at the last face where no new cuts can be made.
 \\
 \\
 What if the polygon's faces were further divided into some number of colinear
-segments? How can we count the number of ways you can cut it?
+segments? How can we count the number of ways to cut it?
 
 \subsection*{Equations}
 
-Let there be a convex polygon with $N$ faces. Each face numbered by $k$ with
-$1 \le k \le N$ and each divided into $x_k$ segments.
-Let $C(x_1,...,x_N)$ be the number of
-cuts. For the simple case where each $x$ is equal to 1, it's the familiar
+Suppose there is a convex polygon with $N$ faces, each face labeled by $k$ ranging over
+$1$, $2$, $...$, $N$. Let $x_k$ be the number of segments present in face $k$.
+Let $C(x_1,...,x_N)$ be the function we want to find which counts the number of cuts possible for this polygon. For the simple case where each $x_k$ is equal to 1, it's the familiar
 formula
 \begin{equation}
     C(1,...,1) = S(N-1,...,0) = \frac{N (N - 1)}{2}
 \end{equation}
-In the general case, the count function satisfies a couple relations. First,
-since the polygon in question has no set orientation and may be rotated, the
-arguments to the count function may also be rotated
+In the general case, the function $C$ satisfies some useful relations. First,
+since the polygon in question has no preferred orientation and may be rotated, the
+arguments to the count function may also be "rotated"
 \begin{equation}
-    C(x_1,...,x_k) = C(x_2,...,x_k,x_1)
+    C(x_1,...,x_N) = C(x_2,...,x_N,x_1)
 \end{equation}
-Second, extending the cut process described for the simple case in the introduction,
-given a known count, dividing a face one time produces one new cut from each other faces'
-segments
+Second, extending the cut process described for the simple case in the introduction, if we have a known count, then dividing a face one additional time produces one new cut from each other faces' segments
 \begin{equation}
-    C((x_1 + 1),...,x_k) = C(x_1,...,x_N) + S(x_2,...,x_N)
+    C((x_1 + 1),...,x_N) = C(x_1,...,x_N) + S(0,x_2,...,x_N)
 \end{equation}
 When $x_1 > 1$, this can be expressed in another way
 \begin{equation}
-    C(x_1,...,x_k) = C((x_1 - 1),...,x_N) + S(x_2,...,x_N)
+    C(x_1,...,x_N) = C((x_1 - 1),...,x_N) + S(0,x_2,...,x_N)
 \end{equation}
-This can be applied repeatedly until the first parameter to the application of $C$ is
+This can be applied repeatedly until the first parameter of $C$ is
 reduced to 1
 \begin{equation}
 \begin{aligned}
-    C(x_1,...,x_k) &= C((x_1 - 1),...,x_N) +           S(x_2,...,x_N) \\
-                   &= C((x_1 - 2),...,x_N) +         2 S(x_2,...,x_N) \\
-                   &= C(1,x_2,...,x_N)     + (x_1 - 1) S(x_2,...,x_N)
+    C(x_1,...,x_N) &= C((x_1 - 1),...,x_N) +           S(0,x_2,...,x_N) \\
+                   &= C((x_1 - 2),...,x_N) +         2 S(0,x_2,...,x_N) \\
+                   &= C(1,x_2,...,x_N)     + (x_1 - 1) S(0,x_2,...,x_N)
 \end{aligned}
 \end{equation}
 Using the two rules together, each parameter to $C$ can be reduced to 1
 and a fully reduced form can be derived
 \begin{equation}
 \begin{aligned}
-    C(x_1,...,x_k) &= C(1,x_2,...,x_N) \\
-                   &+ (x_1 - 1) S(x_2,...,x_N) \\
+    C(x_1,...,x_N) &= C(1,x_2,...,x_N) \\
+                   &+ (x_1 - 1) S(0,x_2,...,x_N) \\
                    &= C(1,1,x_3,...,x_N) \\
-                   &+ (x_1 - 1) S(x_2,...,x_N) \\
-                   &+ (x_2 - 1) S(1,x_3,...,x_N) \\
+                   &+ (x_1 - 1) S(0,x_2,...,x_N) \\
+                   &+ (x_2 - 1) S(1,0,x_3,...,x_N) \\
 %                   &= C(1,1,1,x_4,...,x_N) \\
-%                   &+ (x_1 - 1) S(x_2,...,x_N) \\
-%                   &+ (x_2 - 1) S(1,x_3,...,x_N) \\
-%                   &+ (x_3 - 1) S(1,1,x_4,...,x_N) \\
-                   &= C(1,...,1) + \sum_{k=1}^{N} (x_k - 1) S(1,...,1,x_{k+1},...x_n) \\
-                   &= C(1,...,1) + \sum_{k=1}^{N} (x_k - 1) \left[ (k-1) + S(x_{k+1},...x_n) \right] \\
+%                   &+ (x_1 - 1) S(0,x_2,...,x_N) \\
+%                   &+ (x_2 - 1) S(1,0,x_3,...,x_N) \\
+%                   &+ (x_3 - 1) S(1,1,0,x_4,...,x_N) \\
+                   &= C(1,...,1) + \sum_{k=1}^{N} (x_k - 1) S(1,...,0,x_{k+1},...,x_n) \\
+                   &= C(1,...,1) + \sum_{k=1}^{N} (x_k - 1) \left[ (k-1) + S(x_{k+1},...,x_n) \right] \\
 \end{aligned}
 \end{equation}
 This derivation process is useful when calculating these counts on paper.
@@ -87,7 +84,6 @@ The abbreviations can be expanded for the final result
 \end{aligned}
 \end{equation}
 Computationally, the nested summations do not necessarily mean the calculation
-will take $O(N^2)$ steps since the inner summation can be pre-calculated. Then,
-for each $k$, reduce the calculated value by $x_k$.
+will take $O(N^2)$ additions since the inner summation gets shorter, so its value is reduced by $x_k$ on each iteration of the outer summation.
 
 \end{document}
