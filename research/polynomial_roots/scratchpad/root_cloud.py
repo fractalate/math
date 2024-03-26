@@ -34,7 +34,12 @@ import matplotlib.pyplot as plt
 
 ENGAGE_RANDOMIZER = False
 
-def generateRootCloud(initial_poly, MAX_POINTS = 100000):
+def estimateMaxPoints(n):
+    #return sum(2**i for i in range(1, n + 1))
+    return ((1<<n)<<1) - 1 - 1
+MAX_POINTS_16 = estimateMaxPoints(16)
+
+def generateRootCloud(initial_poly, MAX_POINTS = MAX_POINTS_16):
     queue = [initial_poly]
     points = []
     while len(points) < MAX_POINTS:
@@ -60,7 +65,7 @@ def main():
     #points3 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j])
     #points4 = generateRootCloud([1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.0j, 1.0 + 0.j], MAX_POINTS = 40000)
 
-    plt.figure(figsize=(16,16))
+    plt.figure(figsize=(8,8))
 
     plotPoints(points2)
     #plotPoints(points3)

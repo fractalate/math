@@ -49,7 +49,9 @@ $$
 
 which is the set of roots from all the root pairs in $P$. We are concerned with the behavior of $S(H_n)$ for particular values of $b$ and $c$ as $n$ tends toward $\infty$.
 
-<!-- TODO: Generate a GIF of several steps of iteration from x^2 + x + 1 -->
+For the polynomial $x^2 + x + 1$ where $b = c = 1$, an approximation of the set $S(H_{16})$ looks something like this:
+
+![Approximation of Root Cloud S(H_{16})](./root_cloud_sh16.png "Approximation of Root Cloud $S(H_{16})$")
 
 ## Open Questions
 
