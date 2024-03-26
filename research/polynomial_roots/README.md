@@ -47,7 +47,7 @@ $$
 S(P) = \bigcup_{\rho \in P} \rho
 $$
 
-We are concerned with the behavior of
+which is the set of roots from all the root pairs in $P$. We are concerned with the behavior of
 
 $$
 \lim_{n \rightarrow \infty} S(H_n)
