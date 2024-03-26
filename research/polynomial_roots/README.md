@@ -30,7 +30,7 @@ $$
 G(r) = \\{ F(r_1, r_2), F(r_2, r_1) \\}
 $$
 
-The set of $\rho = G(r)$ has size 1 when $F(r_1, r_2) = F(r_2, r_1)$ and size 2 otherwise. Define a function $H: \mathcal{P}(X) \rightarrow \mathcal{P}(X)$ as
+The set $\rho = G(r)$ has size 1 when $F(r_1, r_2) = F(r_2, r_1)$ and size 2 otherwise. Define a function $H: \mathcal{P}(X) \rightarrow \mathcal{P}(X)$ as
 
 $$
 H(P) = \bigcup_{r \in P} G(r)
