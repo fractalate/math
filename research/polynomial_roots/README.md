@@ -51,7 +51,7 @@ which is the set of roots from all the root pairs in $P$. We are concerned with 
 
 For the polynomial $x^2 + x + 1$ where $b = c = 1$, an approximation of the set $S(H_{16})$ looks something like this:
 
-![Approximation of Root Cloud S(H_{16})](./root_cloud_sh16.png "Approximation of Root Cloud $S(H_{16})$")
+![Approximation of Root Cloud S(H_{16})](./root_cloud_sh16.png)
 
 ## Open Questions
 
