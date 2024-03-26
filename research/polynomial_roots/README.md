@@ -33,7 +33,7 @@ $$
 The set of $\rho = G(r)$ has size 1 when $F(r_1, r_2) = F(r_2, r_1)$ and size 2 otherwise. Define a function $H: \mathcal{P}(X) \rightarrow \mathcal{P}(X)$ as
 
 $$
-H(\Rho) = \bigcup_{r \in \Rho} G(r)
+H(P) = \bigcup_{r \in P} G(r)
 $$
 
 or in less rigorous words, $H$ maps a set root pairs (or set of coefficient pairs) to a new set of root pairs; each resulting root pair being the set of roots of polynomials made from the input root pairs. For example $H(\{ \{r_1, r_2\}, \{r_3, r_4\} \}) = \{F(r_1, r_2), F(r_2, r_1), F(r_3, r_4), F(r_4, r_3)\}$
@@ -44,7 +44,7 @@ Define $H_0 = \{ F(b, c) \}$ and $H_n = H_{n-1} \cup H(H_{n-1})$.
 Define a function $S: \mathcal{P}(\mathbb{X}) \rightarrow \mathcal{P}(\mathbb{C})$ as
 
 $$
-S(\Rho) = \bigcup_{\rho \in \Rho} \rho
+S(P) = \bigcup_{\rho \in P} \rho
 $$
 
 We are concerned with the behavior of
