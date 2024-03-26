@@ -47,7 +47,9 @@ $$
 S(P) = \bigcup_{\rho \in P} \rho
 $$
 
-which is the set of roots from all the root pairs in $P$. We are concerned with the behavior of $S(H_n)$ as $n$ tends toward $\infty$.
+which is the set of roots from all the root pairs in $P$. We are concerned with the behavior of $S(H_n)$ for particular values of $b$ and $c$ as $n$ tends toward $\infty$.
+
+<!-- TODO: Generate a GIF of several steps of iteration from x^2 + x + 1 -->
 
 ## Open Questions
 
