@@ -6,6 +6,12 @@ Here's what I've been working on:
 
 * [Polynomial Roots Iteration](research/polynomial_roots/README.md) - What happens when you use the roots of a polynomial for the coefficients of a new polynomial?
 
+## Papers
+
+Here are some papers I've written:
+
+* [Convex Split-Face Polygon Cuts (PDF, 2022)](./papers/convex_split_face_polygon_cuts/csfpc.pdf)
+
 ## Problems
 
 You can find my work on individual problems, like those from competitions or problem-of-the-week lists, in the [Problems](./problems/README.md) directory.
