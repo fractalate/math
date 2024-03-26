@@ -41,7 +41,7 @@ or in less rigorous words, $H$ maps a set root pairs (or set of coefficient pair
 Define $H_0 = \\{ F(b, c) \\}$ and $H_n = H_{n-1} \cup H(H_{n-1})$.
 
 <!-- S mnemonic is "swarm". "C" for point "cloud" could be confused with \mathbb{C} -->
-Define a function $S: \mathcal{P}(\mathbb{X}) \rightarrow \mathcal{P}(\mathbb{C})$ as
+Define a function $S: \mathcal{P}(X) \rightarrow \mathcal{P}(\mathbb{C})$ as
 
 $$
 S(P) = \bigcup_{\rho \in P} \rho
