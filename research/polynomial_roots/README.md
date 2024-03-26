@@ -38,7 +38,7 @@ $$
 
 or in less rigorous words, $H$ maps a set root pairs (or set of coefficient pairs) to a new set of root pairs; each resulting root pair being the set of roots of polynomials made from the input root pairs. For example $H(\\{ \\{r_1, r_2\\}, \\{r_3, r_4\\} \\}) = \\{F(r_1, r_2), F(r_2, r_1), F(r_3, r_4), F(r_4, r_3)\\}$
 
-Define $H_1 = \\{ F(b, c) \\}$ and $H_n = H_{n-1} \cup H(H_{n-1})$. $H_n$ is the set of all root pairs of all polynomials found in this way after $n$ steps.
+Define $H_1 = \\{ F(b, c) \\}$ and $H_n = H_{n-1} \cup H(H_{n-1})$, the set of all root pairs of all polynomials found after $n$ steps.
 
 <!-- S mnemonic is "swarm". "C" for point "cloud" could be confused with \mathbb{C} -->
 Define a function $S: \mathcal{P}(X) \rightarrow \mathcal{P}(\mathbb{C})$ as
