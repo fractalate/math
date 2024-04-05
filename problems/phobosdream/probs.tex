@@ -5,17 +5,12 @@
 \usepackage{amssymb}
 
 \title{Problems from 2024}
-\author{Kate Novak}
-\date{\today}
 
 \begin{document}
 
 \maketitle
 
-\begin{abstract}
-Welcome to my 2024 problem set, a collection of math problems that I encountered and found interesting throughout the year.
-I hope you find them challenging and enjoy solving these as much as I did!
-\end{abstract}
+Please enjoy this collection of math problems that I encountered and found interesting throughout the year.
 
 % Nothing for January, February, or March.
 \setcounter{section}{3}
@@ -32,15 +27,14 @@ In the complex plane, let $C$ be the circle $\{ z = 1 + e^{i\theta} : 0 \le \the
 Let $f(z) = \left( \frac{\sin z}{z - 1} \right)^2$, which is a holomorphic function with a singularity at $z=1$. The contour integral over the circle can be calculated by leveraging the {\em{residue theorem}} which in our case for one singularity states
 
 \begin{align}
-  \int_{C} f(z)\, dz = 2 \pi i \, I(C,1) \, \operatorname{Res}(f,1) = 2 \pi i \, \operatorname{Res}(f,1)
+  \int_{C} f(z)\, dz = 2 \pi i \, I(C,1) \, \operatorname{Res}(f,1) = 2 \pi i \, \operatorname{Res}(f,1).
 \end{align}
 
-$I(C,1)$ is the winding number at $z=1$, which is equal to 1 since the curve $C$ winds around the point counterclockwise a single time time.
-$\operatorname{Res}(f,1)$ is the residue of $f$ at $z=1$ which is found by examining the coefficients of the laurent series expansion of $f(z)$ at $z = 1$:
+$I(C,1)$ is the winding number at $z=1$, which is equal to 1 since the curve $C$ winds around the point counterclockwise a single time.$\operatorname{Res}(f,1)$ is the residue of $f$ at $z=1$ which is found by examining the coefficients of the laurent series expansion of $f(z)$ at $z = 1$:
 
 \begin{align}
   f(z) =
-  \frac{\sin^2(1)}{(z-1)^2} + \frac{\sin(2)}{z-1} + \cos(2) + \frac{2}{3}(z-1)\sin(2) + \dots
+  \frac{\sin^2(1)}{(z-1)^2} + \frac{\sin(2)}{z-1} + \cos(2) + \frac{2}{3}(z-1)\sin(2) + \dots.
 \end{align}
 
 We find $\operatorname{Res}(f,1) = \sin(2)$, the coefficient of the $\frac{1}{z-1}$ term.
