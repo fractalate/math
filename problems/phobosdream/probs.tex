@@ -24,17 +24,18 @@ In the complex plane, let $C$ be the circle $\{ z = 1 + e^{i\theta} : 0 \le \the
 
 \subsubsection*{Solution}
 
-Let $f(z) = \left( \frac{\sin z}{z - 1} \right)^2$ which is a holomorphic function with a non-essential singularity (or pole) at $z=1$ with order 2. The contour integral over the circle can be calculated by leveraging the {\em{residue theorem}} which in our case for one singularity states
+Let $f(z) = \left( \frac{\sin z}{z - 1} \right)^2$ which is a holomorphic function with a {\em{pole}} (or {\em{non-essential singularity}}) at $z=1$ with order 2. The contour integral over the circle can be calculated by leveraging the {\em{residue theorem}} which in our case for one pole states
 
 \begin{align}
   \int_{C} f(z)\, dz = 2 \pi i \, I(C,1) \, \operatorname{Res}(f,1) = 2 \pi i \, \operatorname{Res}(f,1).
 \end{align}
 
-$I(C,1)$ is the winding number at $z=1$, which is equal to 1 since the curve $C$ winds around the point counterclockwise a single time. $\operatorname{Res}(f,1)$ is the residue of $f$ at $z=1$ which can be found via the following limit approaching the pole
+$I(C,1)$ is the winding number at $z=1$, which is equal to 1 since the curve $C$ winds around the point counterclockwise a single time. $\operatorname{Res}(f,1)$ is the residue of $f$ at $z=1$ which can be found via the {\em{limit formula for higher-order poles}} with $n = 2$ to match the degree of the pole
 
 \begin{align}
-  \operatorname{Res}(f,1)
-    &= \lim_{z \rightarrow 1} \, \frac{d}{dz} \left[ \left(z - 1\right)^2 \cdot \frac{sin^2 z}{(z-1)^2} \right] \\
+  \operatorname{Res}(f, z_0 = 1)
+    &= \frac{1}{(n-1)!} \lim_{z \rightarrow z_0} \, \frac{d^{n-1}}{dz^{n-1}} \left[ \left(z - z_0\right)^n \cdot f(z) \right] \\
+    &= \lim_{z \rightarrow 1} \, \frac{d}{dz} \left[ \left(z - 1\right)^2 \cdot \frac{\sin^2 z}{(z-1)^2} \right] \\
     &= \lim_{z \rightarrow 1} 2 \sin z \cos z \\
     &= 2 \sin 1 \cos 1 \\
     &= \sin 2.
