@@ -1,6 +1,6 @@
 # Problems
 
-You can find my collection of [Problems from 2024 (PDF)](./problems/phobosdream/probs.pdf) here.
+You can find my collection of [Problems from 2024 (PDF)](./phobosdream/probs.pdf) here.
 
 **Macalester College Problem of the Week**
 
