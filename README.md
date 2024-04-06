@@ -2,6 +2,8 @@
 
 Welcome to my open mathematics research! I believe mathematical ideas should be shared freely, so I work on my projects openly and I hope that you find something interesting.
 
+* [Convex Split-Face Polygon Cuts (PDF, 2022)](./papers/convex_split_face_polygon_cuts/csfpc.pdf)
+
 Here's what I've been working on:
 
 * [Circle Cuts (PDF)](./papers/circle_cuts/cuts.pdf) - Give a couple simple rules for cutting a circle and subsequent shapes, how many distinct configurations can be reached after $n$ cuts?
