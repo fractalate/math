@@ -4,9 +4,8 @@ Welcome to my open mathematics research! I believe mathematical ideas should be 
 
 Here's what I've been working on:
 
-<!-- These are links to the blobs in the main branch because of an issue with GitHub where relative links are rendered pointing outside of the repository for some links, but only sometimes. -->
-* [Circle Cuts (PDF)](./math/blob/main/papers/circle_cuts/cuts.pdf) - Give a couple simple rules for cutting a circle and subsequent shapes, how many distinct configurations can be reached after $n$ cuts?
-* [Polynomial Roots Iteration](./math/blob/main/research/polynomial_roots/README.md) - What happens when you use the roots of a polynomial for the coefficients of a new polynomial?
+* [Circle Cuts (PDF)](./papers/circle_cuts/cuts.pdf) - Give a couple simple rules for cutting a circle and subsequent shapes, how many distinct configurations can be reached after $n$ cuts?
+* [Polynomial Roots Iteration](./research/polynomial_roots/README.md) - What happens when you use the roots of a polynomial for the coefficients of a new polynomial?
 
 ## Papers
 
