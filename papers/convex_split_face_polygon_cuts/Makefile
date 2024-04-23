@@ -1,5 +1,5 @@
 csfpc.pdf: csfpc.tex
-	pdflatex csfpc.tex
+	pdflatex -interaction nonstopmode csfpc.tex
 
 .PHONY: live
 live:

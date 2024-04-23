@@ -1,5 +1,5 @@
 cuts.pdf: cuts.tex cut1.png cut2.png
-	pdflatex cuts.tex
+	pdflatex -interaction nonstopmode cuts.tex
 
 .PHONY: clean
 clean:
