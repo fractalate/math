@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\newcounter{problemnumber}
+\setcounter{problemnumber}{0}
+
+\newcommand{\problem}{
+  \stepcounter{problemnumber}
+  \noindent\textbf{\theproblemnumber.}~
+}
+\newcommand{\problemsep}{
+  \noindent\rule{\linewidth}{0.4pt}
+  \vspace{0.0pt}
+}
+
+
+\section*{Questions}
+
+\subsection*{April 24, 2024}
+
+% Cracking the GRE Mathematics Subject Test 4e, Chapter 1, Question 13
+\problem When the polynomial $p(x)$ is divided by $x-1$, it leaves a remainder of 1, and when $p(x)$ is divided by $x+1$, it leaves a remainder of -1. Find the remainder when $p(x)$ is divided by $x^2-1$?
+\\
+
+\begin{tabular}{ccccccccccc}
+  (A) & $-1$
+  &(B) & $0$
+  &(C) & $x$
+  &(D) & $-x$
+  &(E) & $2x$
+\end{tabular}
+
+\problemsep
+
+% Cracking the GRE Mathematics Subject Test 4e, Chapter 1, Question 15
+\problem If the roots of the equation $x^2 + Bx + 1 = 0$ are the squares of the roots of the equation $x^2 + bx + 1 = 0$, which of the following expresses $B$ in terms of $b$?
+\\
+
+\begin{tabular}{ccccccccccc}
+  (A) & $2 - b^2$
+  &(B) & $1 - b^2$
+  &(C) & $b^2 - 1$
+  &(D) & $b^2$
+  &(E) & $b^2 - 2$
+\end{tabular}
+
+\problemsep
+
+\end{document}
