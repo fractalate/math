@@ -16,7 +16,7 @@ Please enjoy this collection of math problems that I encountered and found inter
 \setcounter{section}{3}
 \section{April}
 
-\subsection{Problem 1}
+\subsection{Problem Statement}
 
 This problem comes from the 2023 GRE Mathematics Test Practice Book available from ETS.
 
@@ -50,5 +50,37 @@ Now the integral from the problem can be evaluated
     = \sin(2)
     \approx 0.708.
 \end{align}
+
+\subsection{Problem Statement}
+
+This problem comes from chapter 3, exercise 45 in Contemporary Abstract Algebra, 7th Edition by Joseph A. Gallian.
+
+Let $H$ be a subgroup of a finite group $G$. Suppose that $g$ belongs to $G$ and $n$ is the smallest positive integer such that $g^n \in H$. Prove that $n$ divides $|g|$.
+
+\subsubsection*{Proof}
+
+Let $m = |g|$. For the sake of contradiction, suppose $n \nmid m$ so that $m = kn + r$ for some $k \in \mathbb{Z}^{\ge 0}$ and $r \in \mathbb{Z}$ such that $0 < r < m$. Then, for any $j \in \mathbb{Z}$
+
+\begin{align}
+  m &= kn + r \\
+    &= kn + r + jn - jn \\
+    &= (k + j)n + r - jn
+\end{align}
+
+so
+
+\begin{align}
+  e = g^m &= g^{(k + j)n + r - jn} \\
+          &= g^{(k + j)n}g^{r - jn}
+\end{align}
+
+so
+
+\begin{align}
+  g^{-(k + j)n} = g^{r - jn} \in H
+\end{align}
+
+Choose $j$ to be the greatest integer such that $0 \le r - jn < n$. If $r - jn = 0$ then $m = (k + j)n$, but this can't be the case since $n \nmid m$, so $0 < r - jn < n$. However, $n$ is the least positive integer such that $g^n \in H$ so we have a contradiction. Therefore $n|m$, so $n$ divides $|g|$.
+
 
 \end{document}

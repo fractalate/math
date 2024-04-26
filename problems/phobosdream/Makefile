@@ -1,5 +1,5 @@
 probs.pdf: probs.tex
-	pdflatex probs.tex
+	pdflatex -interaction nonstopmode probs.tex
 
 .PHONY: live
 live:
