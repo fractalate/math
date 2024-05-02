@@ -17,8 +17,6 @@ Here are some papers I've written:
 
 You can find my work on individual problems, like those from competitions or problem-of-the-week lists, in the [Problems](./problems/README.md) directory.
 
-You can find my collection of [Problems from 2024 (PDF)](./problems/phobosdream/probs.pdf) here.
-
 ## Notes
 
 Here are my notes on a few topics:
