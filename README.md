@@ -24,3 +24,4 @@ Here are my notes on a few topics:
 * [Linear Integer Programming (Notebook)](./notes/linear_integer_programming.ipynb)
 * [SageMath Plot with Slider](./notes/sagemath_plot_with_slider.ipynb)
 * [Standard Deviation (Notebook)](./notes/standard_deviation.ipynb)
+* [Willans' Formula](./notes/willans_formula.ipynb)
