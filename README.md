@@ -22,6 +22,7 @@ You can find my work on individual problems, like those from competitions or pro
 Here are my notes on a few topics:
 
 * [Linear Integer Programming (Notebook)](./notes/linear_integer_programming.ipynb)
+* [Numeric Integrals in 3D (Notebook)](./notes/numeric_integrals_3d.ipynb)
 * [SageMath Plot with Slider (SageMath Notebook)](./notes/sagemath_plot_with_slider.ipynb)
 * [Standard Deviation (Notebook)](./notes/standard_deviation.ipynb)
 * [Willans' Formula (Notebook)](./notes/willans_formula.ipynb)
