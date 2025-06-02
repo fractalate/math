@@ -23,6 +23,7 @@ Here are my notes on a few topics:
 
 * [Linear Integer Programming (Notebook)](./notes/linear_integer_programming.ipynb)
 * [Numeric Integrals in 3D (Notebook)](./notes/numeric_integrals_3d.ipynb)
+* [Numeric Solutions to Differential Equations (Notebook)](./notes/numeric_solutions_to_differential_equations.ipynb)
 * [SageMath Plot with Slider (SageMath Notebook)](./notes/sagemath_plot_with_slider.ipynb)
 * [Standard Deviation (Notebook)](./notes/standard_deviation.ipynb)
 * [Willans' Formula (Notebook)](./notes/willans_formula.ipynb)
